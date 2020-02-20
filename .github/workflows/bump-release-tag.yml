@@ -1,8 +1,5 @@
 name: Bump Git tag version for a release branch
-on:
-  push:
-    branches:
-      - release-1.10
+on: push
 
 jobs:
   build:
