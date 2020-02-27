@@ -1,5 +1,8 @@
 name: Bump release tag version
-on: push
+on:
+  push:
+    branches:
+      - release-*
 
 jobs:
   build:
