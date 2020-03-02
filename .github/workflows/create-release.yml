@@ -11,13 +11,10 @@ jobs:
         uses: actions/checkout@master
       - name: Create Release
         if: contains(github.ref, '/release-')
-        uses: actions/create-release@latest
+        uses: actions/release-automation@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release < MAJOR.MINOR.PATCH >
-          body: |
-            PR: #PRN
+          release_branch: ${{ github.ref }}
           draft: true
           prerelease: true
