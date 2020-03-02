@@ -20,4 +20,4 @@ jobs:
           body: |
             PR: #PRN
           draft: true
-          prerelease: false
+          prerelease: true
