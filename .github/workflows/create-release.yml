@@ -1,4 +1,4 @@
-name: Create Release
+name: Automated release management
 on:
   push:
     branches:
@@ -6,14 +6,13 @@ on:
 
 jobs:
   build:
-    name: Create Release
-    runs-on: ubuntu-latest
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout code
         uses: actions/checkout@master
-      - name: Create Release
-        if: contains(github.ref, '/release-')
-        uses: mrexox/release-action@v1.2.1
+      - name: Create Release or bump a version
+        uses: cryptopay-dev/release-automation@v1.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
