@@ -1,6 +1,8 @@
 name: Create Release
 on:
-  create
+  push:
+    branches:
+      - release-*
 
 jobs:
   build:
@@ -11,7 +13,7 @@ jobs:
         uses: actions/checkout@master
       - name: Create Release
         if: contains(github.ref, '/release-')
-        uses: mrexox/release-action@v1.0.9
+        uses: mrexox/release-action@v1.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
