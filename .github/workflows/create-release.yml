@@ -17,6 +17,6 @@ jobs:
         with:
           release_name: Release < MAJOR.MINOR.PATCH >
           body: |
-            PR: LINK TO A PR
+            PR: #PR
           draft: true
           prerelease: false
