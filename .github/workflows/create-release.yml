@@ -14,7 +14,7 @@ jobs:
       - name: Create Release or bump a version
         uses: bagbyte/use-private-action@v0.0.2
         with:
-          private-action: meekly/release-automation@v1.2.1
+          private-action: meekly/release-action@v1.2.1
           private-action-token: ${{ secrets.GITHUB_TOKEN }}
           release_branch: ${{ github.ref }}
           draft: false
