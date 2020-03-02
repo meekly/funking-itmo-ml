@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@master
       - name: Create Release
         if: contains(github.ref, '/release-')
-        uses: mrexox/release-action@v1.0.10
+        uses: mrexox/release-action@v1.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
