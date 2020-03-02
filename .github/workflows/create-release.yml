@@ -6,13 +6,13 @@ on:
 
 jobs:
   build:
-    name: Release
+    name: Release management
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Create Release or bump a version
-        uses: cryptopay-dev/release-automation@v1.2.1
+        uses: cryptopay-dev/release-automation@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
