@@ -15,7 +15,7 @@ jobs:
         uses: bagbyte/use-private-action@v0.0.2
         with:
           private-action: meekly/release-action@v1.0.0
-          private-action-token: ${{ secrets.GITHUB_TOKEN }}
+          private-action-token: ${{ secrets.ACTION_TOKEN }}
           release_branch: ${{ github.ref }}
           draft: false
           prerelease: true
