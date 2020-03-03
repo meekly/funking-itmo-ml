@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2.4.4
+        uses: Logerfo/gitflow-action@0.0.4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: develop
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          dev: develop
+          master: master
+          auto-merge: false
+          require-merge: false
