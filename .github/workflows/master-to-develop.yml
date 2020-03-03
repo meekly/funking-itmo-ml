@@ -17,3 +17,4 @@ jobs:
           master: master
           auto-merge: false
           require-merge: false
+          label: MASTER_TO_DEVELOP
