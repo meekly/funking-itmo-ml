@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Release
+    name: Manage release
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout code
