@@ -15,7 +15,7 @@ jobs:
         uses: invisionapp/private-action-loader@v3
         with:
           pal-repo-token: ${{ secrets.ACTION_TOKEN }}
-          pal-repo-name: meekly/release-action@v1.0.0
+          pal-repo-name: meekly/release-action@master
           release_branch: ${{ github.ref }}
           draft: false
           prerelease: true
